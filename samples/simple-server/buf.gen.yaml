@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  # - plugin: buf.build/community/stephenh-ts-proto
+  #   out: src/resource
+  #   opt:
+  #     - nestJs=true
+  #     - addGrpcMetadata=true
+  #     - addNestjsRestParameter=true
+  #     - forceLong=bigint
+  #     - env=node
+  - plugin: buf.build/community/timostamm-protobuf-ts
+    out: src
+    opt:
+      - optimize_code_size,output_typescript,long_type_bigint,server_grpc1,server_generic
